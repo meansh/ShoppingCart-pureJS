@@ -27,12 +27,12 @@
             style="border-radius: 15px"
           />
         </a>
-        <div class="desc">249</div>
+        <div class="desc">
+          <p id="description0"></p>
+        </div>
         <hr />
-        <button class="btn" onclick="addToCart()">Add to cart</button>
-        <button class="btn1" onclick="removeFromCart()">
-          Remove from cart
-        </button>
+        <button class="btn" id="price0"></button>
+        <button class="btn1" onclick="addToCart()">Add to cart</button>
       </div>
     </div>
     <div class="responsive">
@@ -46,12 +46,12 @@
             style="border-radius: 15px"
           />
         </a>
-        <div class="desc">249</div>
+        <div class="desc">
+          <p id="description1"></p>
+        </div>
         <hr />
-        <button class="btn" onclick="addToCart()">Add to cart</button>
-        <button class="btn1" onclick="removeFromCart()">
-          Remove from cart
-        </button>
+        <button class="btn" id="price1"></button>
+        <button class="btn1" onclick="addToCart()">Add to cart</button>
       </div>
     </div>
     <div class="responsive">
@@ -65,12 +65,12 @@
             style="border-radius: 15px"
           />
         </a>
-        <div class="desc">249</div>
+        <div class="desc">
+          <p id="description2"></p>
+        </div>
         <hr />
-        <button class="btn" onclick="addToCart()">Add to cart</button>
-        <button class="btn1" onclick="removeFromCart()">
-          Remove from cart
-        </button>
+        <button class="btn" id="price2"></button>
+        <button class="btn1" onclick="addToCart()">Add to cart</button>
       </div>
     </div>
     <div class="responsive">
@@ -84,12 +84,12 @@
             style="border-radius: 15px"
           />
         </a>
-        <div class="desc">249</div>
+        <div class="desc">
+          <p id="description3"></p>
+        </div>
         <hr />
-        <button class="btn" onclick="addToCart()">Add to cart</button>
-        <button class="btn1" onclick="removeFromCart()">
-          Remove from cart
-        </button>
+        <button class="btn" id="price3"></button>
+        <button class="btn1" onclick="addToCart()">Add to cart</button>
       </div>
     </div>
 
@@ -104,12 +104,12 @@
             style="border-radius: 15px"
           />
         </a>
-        <div class="desc">249</div>
+        <div class="desc">
+          <p id="description4"></p>
+        </div>
         <hr />
-        <button class="btn" onclick="addToCart()">Add to cart</button>
-        <button class="btn1" onclick="removeFromCart()">
-          Remove from cart
-        </button>
+        <button class="btn" id="price4"></button>
+        <button class="btn1" onclick="addToCart()">Add to cart</button>
       </div>
     </div>
     <div class="responsive">
@@ -123,17 +123,75 @@
             style="border-radius: 15px"
           />
         </a>
-        <div class="desc">249</div>
+        <div class="desc">
+          <p id="description5"></p>
+        </div>
         <hr />
-        <button class="btn" onclick="addToCart()">Add to cart</button>
-        <button class="btn1" onclick="removeFromCart()">
-          Remove from cart
-        </button>
+        <button class="btn" id="price5"></button>
+        <button class="btn1" onclick="addToCart()">Add to cart</button>
       </div>
     </div>
   </div>
-
   <script>
+    var cloth = [
+      {
+        price: 29,
+        title: "T-shirt",
+        desc: "For all the women",
+        id: 0,
+      },
+      {
+        price: 259,
+        title: "Skirt",
+        desc: "Sweatshirt",
+        id: 1,
+      },
+      {
+        price: 46,
+        title: "Frog-face",
+        desc: "Insomnia",
+        id: 2,
+      },
+      {
+        price: 52,
+        title: "Frog-face",
+        desc: "Jacket",
+        id: 3,
+      },
+      {
+        price: 98,
+        title: "Frog-face",
+        desc: "Half t shirt",
+        id: 4,
+      },
+      {
+        price: 193,
+        title: "Frog-face",
+        desc: "Blue T's",
+        id: 5,
+      },
+      {
+        price: 242,
+        title: "Frog-face",
+        desc: "Wind Cheater",
+        id: 6,
+      },
+    ];
+
+    document.getElementById("description0").innerHTML = cloth[0].desc;
+    document.getElementById("description1").innerHTML = cloth[1].desc;
+    document.getElementById("description2").innerHTML = cloth[2].desc;
+    document.getElementById("description3").innerHTML = cloth[3].desc;
+    document.getElementById("description4").innerHTML = cloth[4].desc;
+    document.getElementById("description5").innerHTML = cloth[5].desc;
+
+    document.getElementById("price0").innerHTML = cloth[0].price;
+    document.getElementById("price1").innerHTML = cloth[1].price;
+    document.getElementById("price2").innerHTML = cloth[2].price;
+    document.getElementById("price3").innerHTML = cloth[3].price;
+    document.getElementById("price4").innerHTML = cloth[4].price;
+    document.getElementById("price5").innerHTML = cloth[5].price;
+
     var count = 0;
     const addToCart = () => {
       if (this.count < 30) this.count += 1;
@@ -150,9 +208,3 @@
     };
   </script>
 </body>
-
-<section>
-  <h1>Payment history</h1>
-  <br />
-  <span id="summary"></span>
-</section>
