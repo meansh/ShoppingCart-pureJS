@@ -6,6 +6,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
+  <script type="text/javascript" src="./Cart.js"></script>
 </head>
 <body class="bd">
   <i
@@ -132,52 +133,8 @@
       </div>
     </div>
   </div>
-  <script>
-    var cloth = [
-      {
-        price: 29,
-        title: "T-shirt",
-        desc: "For all the women",
-        id: 0,
-      },
-      {
-        price: 259,
-        title: "Skirt",
-        desc: "Sweatshirt",
-        id: 1,
-      },
-      {
-        price: 46,
-        title: "Frog-face",
-        desc: "Insomnia",
-        id: 2,
-      },
-      {
-        price: 52,
-        title: "Frog-face",
-        desc: "Jacket",
-        id: 3,
-      },
-      {
-        price: 98,
-        title: "Frog-face",
-        desc: "Half t shirt",
-        id: 4,
-      },
-      {
-        price: 193,
-        title: "Frog-face",
-        desc: "Blue T's",
-        id: 5,
-      },
-      {
-        price: 242,
-        title: "Frog-face",
-        desc: "Wind Cheater",
-        id: 6,
-      },
-    ];
 
+  <script>
     document.getElementById("description0").innerHTML = cloth[0].desc;
     document.getElementById("description1").innerHTML = cloth[1].desc;
     document.getElementById("description2").innerHTML = cloth[2].desc;
@@ -191,20 +148,5 @@
     document.getElementById("price3").innerHTML = cloth[3].price;
     document.getElementById("price4").innerHTML = cloth[4].price;
     document.getElementById("price5").innerHTML = cloth[5].price;
-
-    var count = 0;
-    const addToCart = () => {
-      if (this.count < 30) this.count += 1;
-      else if (this.count >= 30) this.count = 0;
-
-      document.getElementById("addOrRemove").innerHTML = count;
-    };
-
-    const removeFromCart = () => {
-      if (this.count > 0) this.count -= 1;
-      else if (this.count <= 0) this.count = 0;
-
-      document.getElementById("addOrRemove").innerHTML = count;
-    };
   </script>
 </body>
